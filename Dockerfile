@@ -2,12 +2,20 @@ FROM golang AS buildando
 
 WORKDIR /app
 
-ADD . /app
+COPY meugo.go /app/
+
 RUN go mod init meugo && \
     go mod tidy && \
-    go build -o meugo
+    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o meugo
 
-FROM alpine
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
 WORKDIR /wf
+
 COPY --from=buildando /app/meugo /wf/
-ENTRYPOINT ["./meugo"]
+
+EXPOSE 8080
+
+ENTRYPOINT ["/wf/meugo"]
