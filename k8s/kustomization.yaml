@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: waynerferreira13/gitopswf
-  newTag: 3098274bdf03851f3ad45744e72ce0af93f33888
+  newTag: 26e41550b22d656d720996fc23119e605a4962f9
