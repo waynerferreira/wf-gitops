@@ -7,7 +7,7 @@ import (
 
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "wayner test println go dockerfile TESTE GITOPS")
+        fmt.Fprintf(w, "wayner test println go dockerfile TESTE GITOPS AGROA COM ARGOCD")
     })
 
     fmt.Println("Server starting on :8080")
