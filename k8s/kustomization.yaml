@@ -7,5 +7,5 @@ resources:
 
 images:
 - name: goserver
-  newName: waynerferreira/gitops
+  newName: waynerferreira13/gitopswf
   newTag:
