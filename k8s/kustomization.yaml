@@ -1,11 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
-kind:  Kustomization
+kind: Kustomization
 
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
 
 images:
 - name: goserver
   newName: waynerferreira13/gitopswf
-  newTag:
+  newTag: ae672c0c66f37eb9c950386d255318a7253e5a50
